@@ -6,3 +6,5 @@ const x = 5;
 const y = 4.3;
 
 console.log(add(x,y));
+
+console.log('xxx')
