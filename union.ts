@@ -1,4 +1,9 @@
-function combine(imput1: number | string, imput2: number | string ) {
+type Combinable = number | string;
+
+function combine(
+    imput1: Combinable, 
+    imput2: Combinable 
+) {
     let result;
     if (typeof imput1 === 'number' && typeof imput2 === 'number') {
         result = imput1 + imput2;
@@ -12,4 +17,8 @@ const combinedAges = combine(12,23);
 console.log(combinedAges);
 
 const combinedNames = combine('Max', 'Anna');
-console.log();
+console.log(combinedNames);
+
+type User = { name: string; age: number; };
+let u1: User = {name: 'Max', age: 28};
+console.log(u1);
