@@ -7,4 +7,7 @@ const y = 4.3;
 
 console.log(addNumbers(x,y));
 
-console.log('xxx')
+const myButton = document.querySelector('button')!;
+myButton.addEventListener('click', () => {
+    console.log('Hi all');
+});
