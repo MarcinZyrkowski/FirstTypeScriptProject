@@ -29,11 +29,34 @@ console.log(newDep);
 class Person {
     constructor(private name: string, private sex: string){}
 }
-
 class Men extends Person {
-    constructor(name: string){
+    constructor(name: string, private phone: string){
         super(name, 'Male');
     }
+
+    get phoneNumber() {
+        return this.phone;
+    }
+
+    set phoneNumber(phone: string) {
+        this.phone = phone;
+    }
+}
+const men = new Men('Max', '5343');
+
+abstract class Company {
+    abstract earnMoney(): void;
 }
 
-const men = new Men('Max');
+class SingletonClass{
+    private static instance: SingletonClass;
+
+    static getInstance() {
+        if (SingletonClass.instance){
+            return this.instance;
+        }
+        return new SingletonClass('singleton');
+    } 
+
+    private constructor(private name: string){};
+}
