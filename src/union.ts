@@ -19,6 +19,6 @@ console.log(combinedAges);
 const combinedNames = combine('Max', 'Anna');
 console.log(combinedNames);
 
-type User = { name: string; age: number; };
-let u1: User = {name: 'Max', age: 28};
+type SpecificUser = { name: string; age: number; };
+let u1: SpecificUser = {name: 'Max', age: 28};
 console.log(u1);
